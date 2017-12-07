@@ -1,0 +1,22 @@
+{
+  "name": "nemo-runner-example",
+  "version": "1.0.0",
+  "description": "nemo runner example repo",
+  "main": "index.js",
+  "scripts": {
+    "nemo": "DEBUG=nemo-runner* nemo-runner -B test",
+    "nemo:search": "DEBUG=nemo-runner* nemo-runner -B test -P search",
+    "nemo:form": "DEBUG=nemo-runner* nemo-runner -B test -P form",
+    "nemo:pay": "DEBUG=nemo-runner* nemo-runner -B test -P pay",
+    "nemo:all": "DEBUG=nemo-runner* nemo-runner -B test -P search,pay,form,base",
+    "nemo:debug": "DEBUG=nemo-runner* nemo-runner -B test  --debug-brk --inspect",
+    "nemo:server": "DEBUG=nemo-runner* nemo-runner -B test --server"
+  },
+  "dependencies": {
+    "nemo": "^3.0.0",
+    "nemo-runner": "git://github.com/paypal/nemo-runner.git#nemo3.restful",
+    "nemo-view": "^3.1.0"
+  },
+  "author": "Matt Edelman",
+  "license": "ISC"
+}

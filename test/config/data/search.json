@@ -1,0 +1,20 @@
+{
+  "google": {
+    "baseUrl": "https://www.google.com",
+    "input": "input[name=q]",
+    "button": "input[type=submit][name=btnK]",
+    "result": "#search"
+  },
+  "yahoo": {
+    "baseUrl": "http://www.yahoo.com",
+    "input": "input[name=p]",
+    "button": "#uh-search-button",
+    "result": "#results"
+  },
+  "bing": {
+    "baseUrl": "http://www.bing.com",
+    "input": "input[name=q]",
+    "button": "input[name=go]",
+    "result": "#b_results"
+  }
+}

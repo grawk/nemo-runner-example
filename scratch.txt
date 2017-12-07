@@ -1,0 +1,16 @@
+  "zelle": {
+    "baseUrl": "http://www.zellepay.com",
+    "signupButton": "a[href*=get-started]",
+    "signupForm": ".partner-list-filters__letter.partner-list-filters__letter--A"
+  }
+
+"driver": {
+        "builders": {
+          "withCapabilities": [{
+            "browserName": "chrome",
+            "chromeOptions": {
+              "args": ["headless","window-size=1200,800"]
+            }
+          }]
+        }
+      },

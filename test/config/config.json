@@ -1,0 +1,50 @@
+{
+  "plugins": {
+    "view": {
+      "module": "nemo-view",
+      "arguments": [
+        "path:locator"
+      ]
+    }
+  },
+  "profiles": {
+    "base": {
+      "tests": "path:./simple.js",
+      "reports": "path:report",
+      "env": {
+        "DEBUG": "nemo-runner*"
+      },
+      "driver": {
+        "builders": {
+          "withCapabilities": [{
+            "browserName": "chrome",
+            "chromeOptions": {
+              "args": ["headless","window-size=1200,800"]
+            }
+          }]
+        }
+      },
+      "mocha": {
+        "timeout": 180000,
+        "reporter": "mochawesome"
+      }
+    },
+    "search": {
+      "tests": "path:./search.js",
+      "parallel": "data",
+      "data": "import:./data/search"
+    },
+    "pay": {
+      "tests": "path:./pay.js",
+      "parallel": "data",
+      "data": "import:./data/pay"
+    },
+    "form": {
+      "tests": "path:./form.js",
+      "data": {
+        "useme": "require:./config/data/useme",
+        "baseUrl": "https://mdn.github.io/learning-area/html/forms/your-first-HTML-form/first-form-styled.html"
+      }
+    }
+  }
+}

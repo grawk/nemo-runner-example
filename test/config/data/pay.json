@@ -1,0 +1,17 @@
+{
+  "paypal": {
+    "baseUrl": "https://www.paypal.com",
+    "signupButton": "#signup-button",//<a href="https://www.paypal.com/us/webapps/mpp/account-selection" id="signup-button" ...>
+    "signupForm": "#cta-btn"
+  },
+  "square": {
+    "baseUrl": "http://www.squareup.com",
+    "signupButton": "a.button[href*=signup]",//<a class="button" href="/signup/us?lang_code=en">Sign up with Square</a>
+    "signupForm": "body.signup-page"//<body class="mac unknown ember-application signup-page">
+  },
+  "zelle": {
+    "baseUrl": "http://www.zellepay.com",
+    "signupButton": "a[href*=get-started]",
+    "signupForm": ".partner-list-filters__letter .partner-list-filters__letter--A"
+  }
+}
